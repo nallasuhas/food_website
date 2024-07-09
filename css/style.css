@@ -145,19 +145,7 @@ nav .navbar a:hover{
     color:var(--pure); 
 }
 /* end of nav-bar */
-.bottom-magic-shadow:after{
-    content:'';
-    display:block;
-    width:100%;
-    height:70px;
-    background-image:url(../icons/shadow.svg);
-    background-repeat: no-repeat;
-    background-position:center;
-    position: absolute;
-    bottom:-22px;
-    z-index: -1;
-    
-}
+
 
 /* end of nav-bar */
 
@@ -206,6 +194,142 @@ header.hero .hero-image{
 }
 /* end of hero-section */
 
+/* section top-products */
+
+section{
+    padding:4rem 0;
+}
+section.top-products{
+    background:var(--light);
+}
+.section-heading:after{
+    content:'';
+    display:block;
+    width: 100%;
+    height:30px;
+    background-image:url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    bottom:-40px;
+}
+/* slider */
+section.top-products .food-slider .food-card{
+    background:var(--heaven);
+    padding:1.5rem 0;
+    border-radius: 4px;
+}
+section.top-products .food-slider .food-card .product-image img{
+    width:80%;
+    height:200px;
+    object-fit:contain;
+    padding-bottom:1rem;
+}
+hr{
+    border:2px solid var(--light);
+    
+    margin:1rem 0;
+}
+section.top-products .food-slider .food-card h2{
+    font-family:"Raleway-bold";
+    font-size:1.3rem;
+    margin-bottom:0.25rem;
+}
+section.top-products .food-slider .food-card .stars{
+    margin-bottom:0.5rem;
+}
+section.top-products .food-slider .food-card .stars img{
+    margin-right:0.25rem;
+}
+section.top-products .food-slider .food-card .price{
+    font-family:"Raleway-medium";
+    color:var(--danger);
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card button{
+    font-family:"Raleway-medium";
+    color:var(--secondary);
+    background:var(--heaven);
+    border:2px solid var(--primary);
+    border-radius: 4px;
+    display:flex;
+    align-items: center;
+    width:50%;
+    font-size:1rem;
+    cursor: pointer;
+    transition:all .3s ease;
+}
+.food-slider .food-card button img{
+    background:var(--primary);
+    padding:0.50rem;
+    height:32px;
+    margin-right:1.2rem;
+}
+section.top-products .food-slider .food-card button:hover{
+    background:var(--primary);
+    color:var(--heaven);
+}
+.top-products .slider-btn{
+    width: 30px;
+    height:30px;
+    border: none;
+    background:var(--primary);
+    border-radius:4px;
+    cursor:pointer;
+    outline:none;
+}
+.top-products .slider{
+    position: relative;
+}
+/* end of slider */
+/* postion the arrow buttons */
+.prev-btn{
+    position:absolute;
+    top:46%;
+    left:-3rem;
+    z-index: 1;
+}
+.next-btn{
+    position:absolute;
+    top:46%;
+    right:-3rem;
+    z-index: 1;
+}
+.top-products .btn-wrapper{
+    margin-top:2rem;
+}
+/* to overwrite existing slick slider properties */
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin:0 -27px;
+}
+.slick-track{
+    padding:1rem 0;
+}
+/* end of custom slick slider properties */
+
+/* end of section top-products */
+
+/* section about-meal */
+
+
+section.about-meal img{
+    width:85%;
+}
+section.about-meal h2{
+    font-family: "Raleway-bold";
+    font-size:1.4rem;
+    color:var(--secondary);
+    margin-bottom:2rem;
+    line-height:1.3;
+}
+section.about-meal p{
+    line-height: 1.7;
+    margin-bottom:4rem;
+}
+/* end of section about-meal */
 
 
 
@@ -215,9 +339,43 @@ header.hero .hero-image{
 
 
 /* utilities */
+.bottom-magic-shadow:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:70px;
+    background-image:url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    position: absolute;
+    bottom:-22px;
+    z-index: -1;
+    
+}
+.bottom-magic-shadow-sm{
+    position: relative;
+    background:var(--heaven);
+}
+.bottom-magic-shadow-sm:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:69px;
+    background-image:url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-1;
+}
 .flex{
     display: flex;
 
+}
+.flex-1{
+  flex: 1;
 }
 .justify-between{
     justify-content: space-between;
@@ -259,4 +417,13 @@ header.hero .hero-image{
     background: var(--heaven);
     color: var(--secondary); 
     border: 1px solid var(--secondary);
+}
+.section-heading{
+    font-family:"Raleway-bold";
+    text-align:center;
+    Position:relative;
+    margin-bottom:6rem;
+}
+.text-center{
+    text-align: center;
 }
